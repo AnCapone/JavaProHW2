@@ -2,6 +2,10 @@ public class Cat extends Animal {
     private final int limitRun = 200;
     private String name;
 
+    public Cat(String name) {
+        this.name = name;
+    }
+
     public String getName() {
         return name;
     }
@@ -18,7 +22,7 @@ public class Cat extends Animal {
         }
     }
 
-    public void swim() {
+    public void swim(int distance) {
         System.out.println("Cat can't swim");
     }
 }

@@ -1,9 +1,9 @@
 public class Animal {
-    public void run() {
-        System.out.println("Animal is running");
+    public void run(int distance) {
+        System.out.println("Animal " + " ran " + distance + " meters");
     }
 
-    public void swim() {
-        System.out.println("Animal is swimming");
+    public void swim(int distance) {
+        System.out.println("Animal " + " swam " + distance + " meters");
     }
 }
