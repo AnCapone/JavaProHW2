@@ -2,9 +2,12 @@ public class Dog extends Animal{
     private final int limitRun = 500;
     private final int limitSwim = 10;
 
+    private static int count = 0;
+
     private String name;
 
     public Dog(String name) {
+        count++;
         this.name = name;
     }
 
@@ -12,15 +15,11 @@ public class Dog extends Animal{
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void run(int distance) {
         if (distance > limitRun) {
             System.out.println("Dog can't run more than " + limitRun + " meters");
         } else {
-            System.out.println(name + " ran " + distance + " meters");
+            System.out.println(getName()+ " ran " + distance + " meters");
         }
     }
 
@@ -28,7 +27,11 @@ public class Dog extends Animal{
         if (distance > limitSwim) {
             System.out.println("Dog can't swim more than " + limitSwim + " meters");
         } else {
-            System.out.println(name + " swam " + distance + " meters");
+            System.out.println(getName() + " swam " + distance + " meters");
         }
+    }
+
+    public static int getCount() {
+        return count;
     }
 }
